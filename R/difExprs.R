@@ -23,13 +23,19 @@
 #' 
 #' ## Creating the expression matrix
 #' 
+#' # The matrix have 200 genes and 20 samples
+#' 
+#' n <- 1000
+#' m <- 20
+#' 
 #' # The vector with treatment samples and control samples
 #' 
 #' treat <- c(rep(0,10),rep(1,10))
 #' 
-#' # Loading normalized expression values
+#' # Calculating the expression values normalized
 #' 
-#' norm <- norm <- read.table(system.file("extdata","expression_example.txt",package = "coexnet"))
+#' mat <- as.matrix(rexp(n, rate = 1))
+#' norm <- t(apply(mat, 1, function(nm) rnorm(m, mean=nm, sd=1)))
 #' 
 #' ## Running the function using the two approaches
 #' 
