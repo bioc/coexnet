@@ -22,9 +22,10 @@
 #' @examples 
 #' 
 #' ## Loading the expression matrix
-#' 
-#' treat <- c(rep(0,10),rep(1,10))
 #' norm <- read.table(system.file("extdata","expression_example.txt",package = "coexnet"))
+#' 
+#' ## Creating vector for control and cases samples
+#' treat <- c(rep(0,10),rep(1,10))
 #' 
 #' ## Running the function using the two approaches
 #' 
